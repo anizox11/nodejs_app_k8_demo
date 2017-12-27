@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: nodejs-restapi
-        image: registry.gitlab.com/madhavikhatawakar/nodejs-restapi
+        image: registry.gitlab.com/madhavikhatawakar/nodejs-rest-api
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
