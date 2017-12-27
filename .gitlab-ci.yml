@@ -48,7 +48,7 @@ k8s-deploy:
   - gcloud config set compute/zone us-central1-a
   - gcloud config set project nodejs-sample-app-189715 
   - gcloud config set container/use_client_certificate True
-  - gcloud container clusters get-credentials nodejs-sample-app
+  - gcloud container clusters get-credentials  nodejs-rest-api
   - kubectl delete secret registry.gitlab.com
   - kubectl create secret docker-registry registry.gitlab.com --docker-server=https://registry.gitlab.com --docker-username=madhavikhatawakar --docker-password=$REGISTRY_PASSWD --docker-email=madhavikh@cybage.com
   - kubectl apply -f deployment.yml
