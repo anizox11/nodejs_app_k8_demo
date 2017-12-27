@@ -1,17 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nodejs-sample-app
+  name: nodejs-restapi
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: nodejs-sample-app
+        app: nodejs-restapi
     spec:
       containers:
-      - name: nodejs-sample-app
-        image: registry.gitlab.com/madhavikhatawakar/nodejs-sample-app
+      - name: nodejs-restapi
+        image: registry.gitlab.com/madhavikhatawakar/nodejs-restapi
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
