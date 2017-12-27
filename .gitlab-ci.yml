@@ -21,7 +21,7 @@ build:
     - npm install
     - npm install -g grunt
     - npm install -g grunt-cli
-    - grunt
+    - grunt --force
 
 package:
   image: node:latest
