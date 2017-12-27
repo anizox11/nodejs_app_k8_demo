@@ -8,7 +8,7 @@ const LodashFilter = require('lodash.filter');
 const LodashTake = require('lodash.take');
 
 const server = new Hapi.Server();
-
+module.export=server;
 server.connection({
 	port: 3000
 });

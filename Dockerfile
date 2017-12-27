@@ -3,7 +3,7 @@ RUN mkdir nodejs_restapi
 WORKDIR nodejs_restapi
 COPY server.js .
 COPY package.json .
-COPY views/ .
+COPY views ./views
 RUN npm install
 RUN npm install pm2 -g
 RUN npm pack
