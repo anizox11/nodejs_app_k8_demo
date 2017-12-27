@@ -1,10 +1,11 @@
 FROM node:latest
-RUN mkdir nodejs_sample_app
-WORKDIR nodejs_sample_app
-COPY app.js .
+RUN mkdir nodejs_restapi
+WORKDIR nodejs_restapi
+COPY server.js .
 COPY package.json .
+COPY views/ .
 RUN npm install
 RUN npm install pm2 -g
 RUN npm pack
 EXPOSE 3000
-ENTRYPOINT ["pm2-docker", "start","app.js"]
+ENTRYPOINT ["pm2-docker", "start","server.js"]
