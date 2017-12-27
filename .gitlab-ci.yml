@@ -35,9 +35,9 @@ package:
 docker-build:
   stage: package
   script:
-  - docker build -t registry.gitlab.com/madhavikhatawakar/nodejs-restapi .
+  - docker build -t registry.gitlab.com/madhavikhatawakar/nodejs-rest-api .
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
-  - docker push registry.gitlab.com/madhavikhatawakar/nodejs-restapi
+  - docker push registry.gitlab.com/madhavikhatawakar/nodejs-rest-api
 
 k8s-deploy:
   image: google/cloud-sdk
