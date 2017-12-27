@@ -1,0 +1,28 @@
+
+
+Server running at: http://Madhavikh:3000
+  GET /
+    1) respond with Serie A 2016/17
+
+
+  0 passing (13ms)
+  1 failing
+
+  1) GET / respond with Serie A 2016/17:
+     TypeError: app.address is not a function
+    at Test.serverAddress (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\supertest\lib\test.js:55:18)
+    at new Test (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\supertest\lib\test.js:36:12)
+    at Object.obj.(anonymous function) [as get] (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\supertest\index.js:25:14)
+    at Context.<anonymous> (D:\Notes\gitlab\nodejs-project\new_restapi\test\test.js:6:18)
+    at callFnAsync (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\mocha\lib\runnable.js:349:8)
+    at Test.Runnable.run (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\mocha\lib\runnable.js:301:7)
+    at Runner.runTest (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\mocha\lib\runner.js:422:10)
+    at D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\mocha\lib\runner.js:528:12
+    at next (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\mocha\lib\runner.js:342:14)
+    at D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\mocha\lib\runner.js:352:7
+    at next (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\mocha\lib\runner.js:284:14)
+    at Immediate.<anonymous> (D:\Notes\gitlab\nodejs-project\new_restapi\node_modules\mocha\lib\runner.js:320:5)
+  
+
+
+
