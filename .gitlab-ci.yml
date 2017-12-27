@@ -46,7 +46,7 @@ k8s-deploy:
   - echo "$GOOGLE_KEY" > key.json # Google Cloud service account key
   - gcloud auth activate-service-account --key-file key.json
   - gcloud config set compute/zone us-central1-a
-  - gcloud config set project nodejs-sample-app-189715 
+  - gcloud config set project nodejs-rest-api-190315 
   - gcloud config set container/use_client_certificate True
   - gcloud container clusters get-credentials  nodejs-rest-api
   - kubectl delete secret registry.gitlab.com
