@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: nodejs-restapi
+  name: nodejs-rest-api
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: nodejs-restapi
+        app: nodejs-rest-api
     spec:
       containers:
-      - name: nodejs-restapi
+      - name: nodejs-rest-api
         image: registry.gitlab.com/madhavikhatawakar/nodejs-rest-api
         imagePullPolicy: Always
         ports:
