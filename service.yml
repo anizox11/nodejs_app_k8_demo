@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Service
 metadata: 
   labels: 
-    app: nodejs-restapi
-  name: nodejs-restapi
+    app: nodejs-rest-api
+  name: nodejs-rest-api
 spec: 
   ports: 
     - port: 3000
   selector: 
-    app: nodejs-restapi
+    app: nodejs-rest-api
   type: LoadBalancer
