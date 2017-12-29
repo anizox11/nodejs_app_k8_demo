@@ -17,7 +17,7 @@ cache:
 build:
   image: node:latest
   stage: build
-   environment:
+  environment:
     name: dev
   script:
     - npm install
