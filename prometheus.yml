@@ -75,8 +75,7 @@ spec:
   - name: prometheus
     protocol: TCP
     port: 9090
-    nodePort: 30090
-  type: NodePort
+  type: LoadBalancer
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
