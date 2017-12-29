@@ -2,7 +2,6 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: nodejs-rest-api
-  namespace: prometheus
 spec:
   replicas: 2
   template:
