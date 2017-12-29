@@ -51,6 +51,8 @@ k8s-deploy:
   - gcloud container clusters get-credentials  nodejs-rest-api
   - kubectl delete secret registry.gitlab.com
   - kubectl create secret docker-registry registry.gitlab.com --docker-server=https://registry.gitlab.com --docker-username=madhavikhatawakar --docker-password=$REGISTRY_PASSWD --docker-email=madhavikh@cybage.com
+  - kubectl delete deployment nodejs-rest-api
+  - kubectl delete service nodejs-rest-api
   - kubectl apply -f deployment.yml
   - kubectl apply -f service.yml
   - kubectl apply -f prometheus.yml
