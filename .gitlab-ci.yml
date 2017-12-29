@@ -17,6 +17,8 @@ cache:
 build:
   image: node:latest
   stage: build
+   environment:
+    name: dev
   script:
     - npm install
     - npm install -g grunt
@@ -26,6 +28,8 @@ build:
 package:
   image: node:latest
   stage: package
+  environment:
+    name: dev
   script: 
     - npm pack
   artifacts:
@@ -34,6 +38,8 @@ package:
 
 docker-build:
   stage: package
+  environment:
+    name: dev
   script:
   - docker build -t registry.gitlab.com/madhavikhatawakar/nodejs-rest-api .
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
@@ -41,7 +47,10 @@ docker-build:
 
 k8s-deploy:
   image: google/cloud-sdk
-  stage: deploy
+  stage: deploy 
+  environment:
+    name: dev
+  
   script:
   - echo "$GOOGLE_KEY" > key.json # Google Cloud service account key
   - gcloud auth activate-service-account --key-file key.json
