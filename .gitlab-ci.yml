@@ -53,6 +53,8 @@ k8s-deploy:
   - kubectl create secret docker-registry registry.gitlab.com --docker-server=https://registry.gitlab.com --docker-username=madhavikhatawakar --docker-password=$REGISTRY_PASSWD --docker-email=madhavikh@cybage.com
   - kubectl delete deployment nodejs-rest-api
   - kubectl delete service nodejs-rest-api
+  - kubectl delete deployment prometheus
+  - kubectl delete service prometheus
   - kubectl apply -f deployment.yml
   - kubectl apply -f service.yml
   - kubectl apply -f prometheus.yml
