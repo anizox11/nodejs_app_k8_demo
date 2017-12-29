@@ -4,7 +4,6 @@ metadata:
   labels: 
     app: nodejs-rest-api
   name: nodejs-rest-api
-  namespace: prometheus
 spec: 
   ports: 
     - port: 3000
